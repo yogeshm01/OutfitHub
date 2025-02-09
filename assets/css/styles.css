@@ -86,7 +86,7 @@ img {
   left: 0;
   background-color: transparent;
   z-index: var(--z-fixed);
-
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .nav{
@@ -154,7 +154,10 @@ img {
 }
 
 /* Background header */
-
+.bg-header{
+  background-color: var(--first-color);
+  box-shadow: 0 2px 16px hsla(0,0%,0%,0.1);
+}
 
 /*=============== HOME ===============*/
 .home__container{
@@ -295,10 +298,10 @@ img {
     transition: opacity 0.3s;
   }
   /* Swiper Class */
-  .swiper-slide-active{
+  .home .swiper-slide-active{
     scale:1;
   }
-  .home .swiper-slide-active :is(.home__product,.home__price){
+  .swiper-slide-active :is(.home__product,.home__price){
     opacity: 1;
   }
 }
@@ -369,5 +372,27 @@ img {
   .home__product,
   .home__price{
     font-size: var(--h2-font-size);
+  }
+
+  .swiper-button-prev{
+    left: calc(50% - 12rem);
+    font-size: 2rem;
+  }
+  .swiper-button-next{
+    right: calc(50% - 12rem);
+    font-size: 2rem;
+  }
+
+  .home__social-link{
+    font-size: 1.5rem;
+
+  }
+
+  ::-webkit-scrollbar{
+    width: 0.6rem;
+    background-color: hsl(0,0%,75%);
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: hsl(0,0%,65%);
   }
 }
